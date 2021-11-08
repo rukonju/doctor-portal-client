@@ -44,7 +44,7 @@ const AppointmentModal = ({open, handleClose, appoint, date, setBookingSuccess})
         date:date.toLocaleDateString()
       }
       console.log(appointment)
-      fetch('http://localhost:5000/appointments',{
+      fetch('https://stormy-harbor-41651.herokuapp.com/appointments',{
         method: 'POST',
         headers: {
           'content-type': 'application/json'

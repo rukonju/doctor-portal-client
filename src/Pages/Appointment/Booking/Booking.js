@@ -3,7 +3,7 @@ import { Button, Grid, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
-const Booking = ({appoint,date}) => {
+const Booking = ({appoint,date, setBookingSuccess}) => {
     const [open, setOpen] =useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -24,7 +24,12 @@ const Booking = ({appoint,date}) => {
                     <Button onClick={handleOpen} variant='contained'>Book Appointment</Button>   
                 </Paper>         
             </Grid>
-            <AppointmentModal date={date} appoint={appoint} open={open} handleClose={handleClose}></AppointmentModal>
+            <AppointmentModal 
+            date={date} 
+            appoint={appoint} 
+            open={open} 
+            setBookingSuccess={setBookingSuccess}
+            handleClose={handleClose}></AppointmentModal>
         </>
     );
 };

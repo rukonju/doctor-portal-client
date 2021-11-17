@@ -4,6 +4,7 @@ import Calander from '../../Shared/Calander/Calander';
 import Appointments from '../Appointments/Appointments';
 
 const DashboardHome = () => {
+    
     const [date, setDate] = useState(new Date())
     return (
         <div>

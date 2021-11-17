@@ -9,7 +9,7 @@ const useFirebase = () =>{
     const [error, setError] = useState('');
     const [admin, setAdmin] = useState(false);
     const [token, setToken] = useState('')
-    
+    console.log(user)
     const auth = getAuth();
     const GoogleProvider = new GoogleAuthProvider();
 
